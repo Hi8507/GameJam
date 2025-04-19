@@ -54,6 +54,20 @@ public class PlayerMove : MonoBehaviour
     }
     private void FixedUpdate()
     {
+        if (Input.GetKey(KeyCode.LeftShift))
+        {
+            GetComponent<Animator>().SetBool("sneak", true);
+            GetComponent<CapsuleCollider>().enabled = false;
+            GetComponent<BoxCollider>().enabled = true;
+        }
+        else
+        {
+            GetComponent<Animator>().SetBool("sneak", false);
+            GetComponent<CapsuleCollider>().enabled = true;
+            GetComponent<BoxCollider>().enabled = false;
+        }
+
+
         if (playerCanMove)
         {
 
@@ -82,12 +96,14 @@ public class PlayerMove : MonoBehaviour
                 if (Input.GetKey(KeyCode.D))
                     Cube.transform.rotation = Quaternion.Euler(0, 180, 0);
 
-
             }
 
             else {
                GetComponent<Animator>().SetBool("Walk", false);
             }
+
+
+
 
         targetVelocity = transform.TransformDirection(targetVelocity) * walkSpeed;
 
