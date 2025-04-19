@@ -3,14 +3,17 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using UnityEditor.SearchService;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.UIElements.Experimental;
+using UnityEngine.SceneManagement;
 
 public class GameScript : MonoBehaviour
 {
     [SerializeField] TextMeshProUGUI timerText;
     [SerializeField] public float RemainingTime;
+    public Slider SanityMeter;
 
     public  int StartTime=1;
     public int startNumber = 59;
@@ -31,17 +34,19 @@ public class GameScript : MonoBehaviour
     void Update()
     {
        
-            if (StartTime >= 0)
-            { if (Timerstop == false)
-                {
+            if (StartTime >= 0){ 
+
+                if (Timerstop == false){
+
                     // StartTime = 0;
                     StartTime = 0;
                     RemainingTime += Time.deltaTime;
                     StartTime += startNumber;
                     seconds = Mathf.FloorToInt(RemainingTime % 60);
 
-                    StartTime -= seconds;
-                    timerText.text = "Time: " + StartTime.ToString();
+                    StartTime -= seconds*5;
+                 //   timerText.text = "Time: " + StartTime.ToString();
+                 SanityMeter.value = StartTime;
 
                 }
             }
@@ -50,8 +55,11 @@ public class GameScript : MonoBehaviour
             {
                 Timerstop = true;
                 RemainingTime = 0;
-                seconds = 0;
-            }
+            seconds = 0;
+
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+
+        }
             // StartTime = 1;
            }
      
