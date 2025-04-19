@@ -44,7 +44,7 @@ public class GameScript : MonoBehaviour
                     StartTime += startNumber;
                     seconds = Mathf.FloorToInt(RemainingTime % 60);
 
-                    StartTime -= seconds*5;
+                    StartTime -= seconds;
                  //   timerText.text = "Time: " + StartTime.ToString();
                  SanityMeter.value = StartTime;
 
