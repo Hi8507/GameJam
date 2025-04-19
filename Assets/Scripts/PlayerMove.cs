@@ -1,3 +1,4 @@
+using DG.Tweening;
 using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.AI;
@@ -5,6 +6,8 @@ using UnityEngine.AI;
 [RequireComponent(typeof(NavMeshAgent))]
 public class PlayerMove : MonoBehaviour
 {
+    public GameObject Cube;
+
     [SerializeField]
     private Camera Camera = null;
     private NavMeshAgent Agent;
@@ -54,18 +57,39 @@ public class PlayerMove : MonoBehaviour
         if (playerCanMove)
         {
 
-            Vector3 targetVelocity = new Vector3(Input.GetAxis("Vertical"), 0, -Input.GetAxis("Horizontal"));
+            Vector3 targetVelocity = new Vector3(Input.GetAxis("Horizontal") , 0, Input.GetAxis("Vertical"));
 
-            if (targetVelocity.x != 0 || targetVelocity.z != 0 && isGrounded)
+            //if (targetVelocity.x != 0 || targetVelocity.z != 0 && isGrounded)
+            //{
+            //    isWalking = true;
+            //}
+            //else
+            //{
+            //    isWalking = false;
+            //}
+            if (Input.GetKey(KeyCode.W)|| Input.GetKey(KeyCode.A)|| Input.GetKey(KeyCode.S)|| Input.GetKey(KeyCode.D))
             {
-                isWalking = true;
-            }
-            else
-            {
-                isWalking = false;
+                GetComponent<Animator>().SetBool("Walk", true);
+                if (Input.GetKey(KeyCode.W))
+                    Cube.transform.rotation= Quaternion.Euler(0, 90, 0);
+
+                if (Input.GetKey(KeyCode.A))
+                    Cube.transform.rotation = Quaternion.Euler(0, 0, 0);
+
+                if (Input.GetKey(KeyCode.S))
+                    Cube.transform.rotation = Quaternion.Euler(0, -90, 0);
+
+                if (Input.GetKey(KeyCode.D))
+                    Cube.transform.rotation = Quaternion.Euler(0, 180, 0);
+
+
             }
 
-            targetVelocity = transform.TransformDirection(targetVelocity) * walkSpeed;
+            else {
+               GetComponent<Animator>().SetBool("Walk", false);
+            }
+
+        targetVelocity = transform.TransformDirection(targetVelocity) * walkSpeed;
 
             // Apply a force that attempts to reach our target velocity
             Vector3 velocity = rb.velocity;
@@ -110,9 +134,11 @@ public class PlayerMove : MonoBehaviour
         // Adds force to the player rigidbody to jump
         if (isGrounded)
         {
+            GetComponent<Animator>().SetTrigger("jump");
             Jumped = true;
             rb.AddForce(0f, jumpPower, 0f, ForceMode.Impulse);
             isGrounded = false;
+
 
         }
 
