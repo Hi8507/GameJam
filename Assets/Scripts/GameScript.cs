@@ -60,19 +60,24 @@ public class GameScript : MonoBehaviour
                 RemainingTime = 0;
             seconds = 0;
 
-            Scene currentScene = SceneManager.GetActiveScene();
-            SceneManager.LoadScene(SceneManager.GetActiveScene);
+            ReloadScene();
 
-        }
+            }
             // StartTime = 1;
-           }
-     
+    }
+
+    private void ReloadScene()
+    {
+        // Get the currently active scene and reload it
+        UnityEngine.SceneManagement.Scene currentScene = SceneManager.GetActiveScene();
+        SceneManager.LoadScene(currentScene.name);
+    }
 
 
 
-      
-       
-     
-       
-    
+
+
+
+
+
 }
