@@ -26,6 +26,7 @@ public class GameScript : MonoBehaviour
 
 
 
+
     // Start is called before the first frame update
     public void Start()
    {
@@ -59,7 +60,8 @@ public class GameScript : MonoBehaviour
                 RemainingTime = 0;
             seconds = 0;
 
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            Scene currentScene = SceneManager.GetActiveScene();
+            SceneManager.LoadScene(SceneManager.GetActiveScene);
 
         }
             // StartTime = 1;
