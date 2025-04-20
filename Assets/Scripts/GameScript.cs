@@ -21,6 +21,8 @@ public class GameScript : MonoBehaviour
 
     public int seconds;
 
+    public GameObject Yellowpill, Pinkpill;
+
 
 
 
@@ -41,7 +43,7 @@ public class GameScript : MonoBehaviour
                     // StartTime = 0;
                     StartTime = 0;
                     RemainingTime += Time.deltaTime;
-                    StartTime += startNumber;
+                    StartTime += startNumber+ Yellowpill.GetComponent<TriggerPills>().SanityPoints;
                     seconds = Mathf.FloorToInt(RemainingTime % 60);
 
                     StartTime -= seconds;
@@ -51,7 +53,7 @@ public class GameScript : MonoBehaviour
                 }
             }
 
-            else if (StartTime < 0)
+            else if (StartTime <= 0)
             {
                 Timerstop = true;
                 RemainingTime = 0;
