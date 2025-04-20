@@ -60,8 +60,7 @@ public class GameScript : MonoBehaviour
                 RemainingTime = 0;
             seconds = 0;
 
-            Scene currentScene = SceneManager.GetActiveScene();
-            SceneManager.LoadScene(SceneManager.GetActiveScene);
+            UnityEngine.SceneManagement.Scene currentScene = UnityEngine.SceneManagement.SceneManager.GetActiveScene();
 
         }
             // StartTime = 1;

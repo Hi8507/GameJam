@@ -29,7 +29,7 @@ public class TriggerPills : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Character"))
+        if (other.CompareTag("Player"))
         {
             if (SanityPoints < 1)
             {
@@ -39,7 +39,7 @@ public class TriggerPills : MonoBehaviour
         }
     private void OnTriggerStay(Collider other)
     {
-        if (other.CompareTag("Character"))
+        if (other.CompareTag("Player"))
         {
             if (asd1 == false) { 
                 if (Input.GetKeyDown(KeyCode.E))
@@ -55,7 +55,7 @@ public class TriggerPills : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.CompareTag("Character"))
+        if (other.CompareTag("Player"))
         {
             Takepills.SetActive(false);
 
