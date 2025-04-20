@@ -53,7 +53,7 @@ public class GameScript : MonoBehaviour
                 }
             }
 
-            else if (StartTime <= 0)
+            else if (StartTime < 0)
             {
                 Timerstop = true;
                 RemainingTime = 0;
