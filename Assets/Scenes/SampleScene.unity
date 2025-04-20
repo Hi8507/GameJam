@@ -4703,6 +4703,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -7635826562936255635, guid: 623677be60483ba459978272995e40fc, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -7635826562936255635, guid: 623677be60483ba459978272995e40fc, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 3db5a0eca7e1a8147bf0310936b7264c, type: 2}
@@ -14676,7 +14680,7 @@ MonoBehaviour:
   RemainingTime: 0
   SanityMeter: {fileID: 2060785595}
   StartTime: 1
-  startNumber: 100
+  startNumber: 60
   seconds: 0
   Yellowpill: {fileID: 1917407824}
   Pinkpill: {fileID: 0}
@@ -22910,6 +22914,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 8164078558771037576, guid: 3541ab6a0dfa24146844ed756370333a, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1974559998}
+    - targetCorrespondingSourceObject: {fileID: 8164078558771037576, guid: 3541ab6a0dfa24146844ed756370333a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1974559999}
   m_SourcePrefab: {fileID: 100100000, guid: 3541ab6a0dfa24146844ed756370333a, type: 3}
 --- !u!1 &1974559997 stripped
 GameObject:
@@ -22934,6 +22941,27 @@ MonoBehaviour:
   yellow: 0
   pink: 0
   purple: 1
+--- !u!65 &1974559999
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1974559997}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 40.812836, y: 33.20709, z: 36.503925}
+  m_Center: {x: 0.15205383, y: -8.397158, z: 8.88215}
 --- !u!1001 &1976290361
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -23945,7 +23973,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 0}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 100
+  m_MaxValue: 60
   m_WholeNumbers: 1
   m_Value: 0
   m_OnValueChanged:
