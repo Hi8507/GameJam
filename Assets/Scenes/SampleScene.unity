@@ -730,27 +730,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 1
---- !u!114 &70307719
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 919132149091529427}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 125e12bd0e890414fb157225ac5e7825, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Cube: {fileID: 1923991657}
-  Camera: {fileID: 963194227}
-  playerCanMove: 1
-  walkSpeed: 5
-  maxVelocityChange: 10
-  enableJump: 1
-  jumpKey: 32
-  jumpPower: 10
-  Jumped: 0
 --- !u!195 &70307720
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -11373,12 +11352,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.00000002003365, y: 0.6999538, z: 0.000000019634363, w: 0.7141882}
-  m_LocalPosition: {x: -221.89842, y: 1.5499996, z: 204.23901}
+  m_LocalRotation: {x: 0.36771894, y: 0.009522607, z: -0.003765691, w: 0.9298806}
+  m_LocalPosition: {x: -0.11953735, y: 5.4715357, z: -5.8350677}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 543450653629720681}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 90}
 --- !u!114 &963194229
 MonoBehaviour:
@@ -21446,13 +21425,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1785587928}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.000000020033648, y: 0.6999538, z: 0.000000019634363, w: 0.71418816}
-  m_LocalPosition: {x: -221.89839, y: 1.5499996, z: 204.23897}
+  m_LocalRotation: {x: 0.36771894, y: 0.009522606, z: -0.0037656904, w: 0.9298806}
+  m_LocalPosition: {x: -0.119522095, y: 5.4715357, z: -5.8350677}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 136061037}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 543450653629720681}
   m_LocalEulerAnglesHint: {x: 45, y: 90, z: -0.002}
 --- !u!1 &1791017836 stripped
 GameObject:
@@ -26472,14 +26451,16 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 919132149091529427}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -213.9, y: 1.55, z: 204.4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1923991658}
+  - {fileID: 963194228}
+  - {fileID: 1785587930}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &608321761407298046
 Transform:
   m_ObjectHideFlags: 0
@@ -26524,9 +26505,9 @@ GameObject:
   - component: {fileID: 70307717}
   - component: {fileID: 70307716}
   - component: {fileID: 70307720}
-  - component: {fileID: 70307719}
   - component: {fileID: 919132149091529428}
   - component: {fileID: 919132149091529429}
+  - component: {fileID: 919132149091529430}
   m_Layer: 0
   m_Name: Lily
   m_TagString: Character
@@ -26576,6 +26557,27 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1.4894185, z: 1}
   m_Center: {x: 0, y: 0.24470925, z: 0}
+--- !u!114 &919132149091529430
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 919132149091529427}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 125e12bd0e890414fb157225ac5e7825, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Cube: {fileID: 1923991657}
+  Camera: {fileID: 963194227}
+  playerCanMove: 1
+  walkSpeed: 5
+  maxVelocityChange: 10
+  enableJump: 1
+  jumpKey: 32
+  jumpPower: 5
+  Jumped: 0
 --- !u!1 &1082271958627520904
 GameObject:
   m_ObjectHideFlags: 0
@@ -27667,8 +27669,6 @@ GameObject:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
-  - {fileID: 963194228}
-  - {fileID: 1785587930}
   - {fileID: 705507995}
   - {fileID: 694418370}
   - {fileID: 1828053068}
