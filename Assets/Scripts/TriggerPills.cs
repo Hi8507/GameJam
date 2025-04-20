@@ -19,6 +19,7 @@ public class TriggerPills : MonoBehaviour
     void Start()
     {
         Takepills.SetActive(false);
+        asd1 = false;
     }
 
     // Update is called once per frame
@@ -45,6 +46,8 @@ public class TriggerPills : MonoBehaviour
                 {
                     SanityPoints = SanityAdd;
                     Takepills.SetActive(false);
+                    asd1 = true;
+                    this.gameObject.SetActive(false);
                 }
         }
         }
