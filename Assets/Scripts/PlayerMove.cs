@@ -2,6 +2,7 @@ using DG.Tweening;
 using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.EventSystems;
 
 [RequireComponent(typeof(NavMeshAgent))]
 public class PlayerMove : MonoBehaviour
@@ -54,6 +55,8 @@ public class PlayerMove : MonoBehaviour
     }
     private void FixedUpdate()
     {
+        if (!playerCanMove) return;
+
         if (Input.GetKey(KeyCode.LeftShift))
         {
             GetComponent<Animator>().SetBool("sneak", true);
@@ -67,66 +70,47 @@ public class PlayerMove : MonoBehaviour
             GetComponent<BoxCollider>().enabled = false;
         }
 
+        Vector3 inputDir = new Vector3(Input.GetAxisRaw("Horizontal"), 0f, Input.GetAxisRaw("Vertical")).normalized;
 
-        if (playerCanMove)
+        if (inputDir.magnitude > 0)
         {
+            // Get camera-forward and camera-right directions (flattened on Y)
+            Vector3 camForward = Camera.transform.forward;
+            camForward.y = 0f;
+            camForward.Normalize();
 
-            Vector3 targetVelocity = new Vector3(Input.GetAxis("Horizontal") , 0, Input.GetAxis("Vertical"));
+            Vector3 camRight = Camera.transform.right;
+            camRight.y = 0f;
+            camRight.Normalize();
 
-            //if (targetVelocity.x != 0 || targetVelocity.z != 0 && isGrounded)
-            //{
-            //    isWalking = true;
-            //}
-            //else
-            //{
-            //    isWalking = false;
-            //}
-            if (Input.GetKey(KeyCode.W)|| Input.GetKey(KeyCode.A)|| Input.GetKey(KeyCode.S)|| Input.GetKey(KeyCode.D))
-            {
-                GetComponent<Animator>().SetBool("Walk", true);
-                if (Input.GetKey(KeyCode.W))
-                    Cube.transform.rotation= Quaternion.Euler(0, 90, 0);
+            // Combine input with camera directions
+            Vector3 moveDir = camForward * inputDir.z + camRight * inputDir.x;
+            moveDir.Normalize();
 
-                if (Input.GetKey(KeyCode.A))
-                    Cube.transform.rotation = Quaternion.Euler(0, 0, 0);
-
-                if (Input.GetKey(KeyCode.S))
-                    Cube.transform.rotation = Quaternion.Euler(0, -90, 0);
-
-                if (Input.GetKey(KeyCode.D))
-                    Cube.transform.rotation = Quaternion.Euler(0, 180, 0);
-
-            }
-
-            else {
-               GetComponent<Animator>().SetBool("Walk", false);
-            }
-
-
-
-
-        targetVelocity = transform.TransformDirection(targetVelocity) * walkSpeed;
-
-            // Apply a force that attempts to reach our target velocity
+            // Move the Rigidbody
+            Vector3 targetVelocity = moveDir * walkSpeed;
             Vector3 velocity = rb.velocity;
-            Vector3 velocityChange = (targetVelocity - velocity);
+            Vector3 velocityChange = targetVelocity - velocity;
             velocityChange.x = Mathf.Clamp(velocityChange.x, -maxVelocityChange, maxVelocityChange);
             velocityChange.z = Mathf.Clamp(velocityChange.z, -maxVelocityChange, maxVelocityChange);
-            velocityChange.y = 0;
+            velocityChange.y = 0f;
 
             rb.AddForce(velocityChange, ForceMode.VelocityChange);
 
+            // Rotate the Cube to face movement direction
+            Cube.transform.rotation = Quaternion.LookRotation(moveDir);
 
+            GetComponent<Animator>().SetBool("Walk", true);
+        }
+        else
+        {
+            GetComponent<Animator>().SetBool("Walk", false);
         }
 
-
-
-        // All movement calculations while walking
-
-        
+        CheckGround();
     }
 
-    
+
     private void CheckGround()
     {
         Vector3 origin = new Vector3(transform.position.x, transform.position.y - (transform.localScale.y * .5f), transform.position.z);
