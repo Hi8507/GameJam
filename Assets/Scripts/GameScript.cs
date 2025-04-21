@@ -61,12 +61,7 @@ public class GameScript : MonoBehaviour
                 RemainingTime = 0;
             seconds = 0;
 
-<<<<<<< HEAD
-            UnityEngine.SceneManagement.Scene currentScene = UnityEngine.SceneManagement.SceneManager.GetActiveScene();
-=======
             ReloadScene();
->>>>>>> 4b1b7424d23fdef73533168438d2eaa6fa2430ed
-
             }
             // StartTime = 1;
     }
