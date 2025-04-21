@@ -3,7 +3,27 @@ guid: a646b5eb676b0be4885503272a770ca0
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: glass
+    second: {fileID: 2100000, guid: 5a9c94dbe2ea5f94b87c7589c59986db, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: "kap\u0131_reengi"
+    second: {fileID: 2100000, guid: 5ac8e683a6d7afb448f186ea4f3cd814, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: metal
+    second: {fileID: 2100000, guid: 3382d44384a958e4996eda3aefcdd123, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: siyah
+    second: {fileID: 2100000, guid: 254c472b5c727e34286d844696c2c6a1, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

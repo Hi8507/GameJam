@@ -1,8 +1,7 @@
-using DG.Tweening;
-using UnityEditor.Experimental.GraphView;
+﻿using DG.Tweening;
 using UnityEngine;
 using UnityEngine.AI;
-using UnityEngine.EventSystems;
+using System.Collections;
 
 [RequireComponent(typeof(NavMeshAgent))]
 public class PlayerMove : MonoBehaviour
@@ -17,8 +16,8 @@ public class PlayerMove : MonoBehaviour
 
     public bool playerCanMove = true;
     public float walkSpeed = 5f;
+    public float runSpeed = 8f;
     public float maxVelocityChange = 10f;
-    private bool isWalking = false;
 
     public bool enableJump = true;
     public KeyCode jumpKey = KeyCode.Space;
@@ -27,54 +26,43 @@ public class PlayerMove : MonoBehaviour
     public bool Jumped = false;
 
     private Rigidbody rb;
+    private Animator animator;
 
     private void Awake()
     {
         rb = GetComponent<Rigidbody>();
         Agent = GetComponent<NavMeshAgent>();
+        animator = GetComponent<Animator>();
     }
 
     private void Update()
     {
-        if (Input.GetKeyUp(KeyCode.W))
-        {
-            
-            //Ray ray = Camera.ScreenPointToRay(Input.mousePosition);
-
-            //if (Physics.RaycastNonAlloc(ray, Hits) > 0)
-            //{
-            //    Agent.SetDestination(Hits[0].point);
-            //}
-        }
-
         if (enableJump && Input.GetKeyDown(jumpKey) && isGrounded)
         {
             Jump();
         }
+
+        animator.SetBool("Jumping", !isGrounded); // Update jump status
         CheckGround();
     }
+
     private void FixedUpdate()
     {
         if (!playerCanMove) return;
 
-        if (Input.GetKey(KeyCode.LeftShift))
-        {
-            GetComponent<Animator>().SetBool("sneak", true);
-            GetComponent<CapsuleCollider>().enabled = false;
-            GetComponent<BoxCollider>().enabled = true;
-        }
-        else
-        {
-            GetComponent<Animator>().SetBool("sneak", false);
-            GetComponent<CapsuleCollider>().enabled = true;
-            GetComponent<BoxCollider>().enabled = false;
-        }
+        // Sneaking
+        bool isSneaking = Input.GetKey(KeyCode.LeftShift);
+        animator.SetBool("sneak", isSneaking);
 
+        GetComponent<CapsuleCollider>().enabled = !isSneaking;
+        GetComponent<BoxCollider>().enabled = isSneaking;
+
+        // Movement
         Vector3 inputDir = new Vector3(Input.GetAxisRaw("Horizontal"), 0f, Input.GetAxisRaw("Vertical")).normalized;
 
         if (inputDir.magnitude > 0)
         {
-            // Get camera-forward and camera-right directions (flattened on Y)
+            // Movement direction relative to camera
             Vector3 camForward = Camera.transform.forward;
             camForward.y = 0f;
             camForward.Normalize();
@@ -83,12 +71,20 @@ public class PlayerMove : MonoBehaviour
             camRight.y = 0f;
             camRight.Normalize();
 
-            // Combine input with camera directions
             Vector3 moveDir = camForward * inputDir.z + camRight * inputDir.x;
             moveDir.Normalize();
 
-            // Move the Rigidbody
-            Vector3 targetVelocity = moveDir * walkSpeed;
+            // Walk or run
+            bool isRunning = Input.GetKey(KeyCode.LeftControl);
+            float speed = isRunning ? runSpeed : walkSpeed;
+
+            // Set animation parameters
+            animator.SetBool("Walk", !isRunning);
+            animator.SetBool("Run", isRunning);
+            animator.SetBool("CrouchWalk", isSneaking);
+
+            // Movement
+            Vector3 targetVelocity = moveDir * speed;
             Vector3 velocity = rb.velocity;
             Vector3 velocityChange = targetVelocity - velocity;
             velocityChange.x = Mathf.Clamp(velocityChange.x, -maxVelocityChange, maxVelocityChange);
@@ -97,51 +93,94 @@ public class PlayerMove : MonoBehaviour
 
             rb.AddForce(velocityChange, ForceMode.VelocityChange);
 
-            // Rotate the Cube to face movement direction
             Cube.transform.rotation = Quaternion.LookRotation(moveDir);
-
-            GetComponent<Animator>().SetBool("Walk", true);
         }
         else
         {
-            GetComponent<Animator>().SetBool("Walk", false);
+            // Stop movement and reset walk/run animations
+            Vector3 velocity = rb.velocity;
+            velocity.x = Mathf.Lerp(velocity.x, 0, 0.2f);
+            velocity.z = Mathf.Lerp(velocity.z, 0, 0.2f);
+            rb.velocity = velocity;
+
+            animator.SetBool("Walk", false);
+            animator.SetBool("Run", false);
+            animator.SetBool("CrouchWalk", false);
         }
 
         CheckGround();
     }
 
-
     private void CheckGround()
     {
         Vector3 origin = new Vector3(transform.position.x, transform.position.y - (transform.localScale.y * .5f), transform.position.z);
-        Vector3 direction = transform.TransformDirection(Vector3.down);
+        Vector3 direction = Vector3.down;
         float distance = .75f;
 
-        if (Physics.Raycast(origin, direction, out RaycastHit hit, distance))
-        {
-            Debug.DrawRay(origin, direction * distance, Color.red);
-            isGrounded = true;
-
-        }
-        else
-        {
-            isGrounded = false;
-        }
+        isGrounded = Physics.Raycast(origin, direction, out _, distance);
     }
 
     private void Jump()
     {
-        // Adds force to the player rigidbody to jump
         if (isGrounded)
         {
-            GetComponent<Animator>().SetTrigger("jump");
-            Jumped = true;
-            rb.AddForce(0f, jumpPower, 0f, ForceMode.Impulse);
-            isGrounded = false;
-
-
+            StartCoroutine(JumpAfterAnimation());
         }
-
     }
 
+    private IEnumerator JumpAfterAnimation()
+    {
+        animator.SetTrigger("jump");
+        Jumped = true;
+
+        yield return new WaitForSeconds(0.3f);
+
+        rb.AddForce(Vector3.up * jumpPower, ForceMode.Impulse);
+        isGrounded = false;
+    }
+
+    void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("moving"))
+        {
+            transform.parent = collision.transform;
+        }
+    }
+
+    void OnCollisionExit(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("moving"))
+        {
+            transform.parent = null;
+        }
+    }
+
+    // BONUS HOOKS (You can call these from interaction scripts later)
+
+    public void StartPushPull()
+    {
+        animator.SetTrigger("PushPullStart");
+        animator.SetBool("PushPull", true);
+    }
+
+    public void StopPushPull()
+    {
+        animator.SetTrigger("PushPullStop");
+        animator.SetBool("PushPull", false);
+    }
+
+    public void HangJump()
+    {
+        animator.SetTrigger("HangJump");
+    }
+
+    public void SetClimbing(bool isClimbing)
+    {
+        animator.SetBool("Climb", isClimbing);
+    }
+
+    public void SetHanging(bool isHanging)
+    {
+        animator.SetBool("Hanging", isHanging);
+    }
 }
