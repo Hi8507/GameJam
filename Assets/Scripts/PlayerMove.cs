@@ -42,7 +42,7 @@ public class PlayerMove : MonoBehaviour
             Jump();
         }
 
-        animator.SetBool("Jumping", !isGrounded); // Update jump status
+        animator.SetBool("jump", !isGrounded); // Update jump status
         CheckGround();
     }
 
@@ -51,7 +51,7 @@ public class PlayerMove : MonoBehaviour
         if (!playerCanMove) return;
 
         // Sneaking
-        bool isSneaking = Input.GetKey(KeyCode.LeftShift);
+        bool isSneaking = Input.GetKey(KeyCode.LeftControl);
         animator.SetBool("sneak", isSneaking);
 
         GetComponent<CapsuleCollider>().enabled = !isSneaking;
@@ -75,7 +75,7 @@ public class PlayerMove : MonoBehaviour
             moveDir.Normalize();
 
             // Walk or run
-            bool isRunning = Input.GetKey(KeyCode.LeftControl);
+            bool isRunning = Input.GetKey(KeyCode.LeftShift);
             float speed = isRunning ? runSpeed : walkSpeed;
 
             // Set animation parameters
