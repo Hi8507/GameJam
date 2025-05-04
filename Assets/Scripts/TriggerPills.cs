@@ -44,7 +44,7 @@ public class TriggerPills : MonoBehaviour
             if (asd1 == false) { 
                 if (Input.GetKeyDown(KeyCode.E))
                 {
-                    SanityPoints = SanityAdd;
+                    SanityPoints += SanityAdd;
                     Takepills.SetActive(false);
                     asd1 = true;
                     this.gameObject.SetActive(false);
