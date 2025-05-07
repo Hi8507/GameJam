@@ -385,7 +385,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 23ad50b135298644ba1aef9094c77dc4, type: 3}
       propertyPath: m_Name
-      value: Jam1Hand3 (9)
+      value: JamHand16
       objectReference: {fileID: 0}
     - target: {fileID: 1151388028547126963, guid: 23ad50b135298644ba1aef9094c77dc4, type: 3}
       propertyPath: m_LocalRotation.w
@@ -3706,7 +3706,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 23ad50b135298644ba1aef9094c77dc4, type: 3}
       propertyPath: m_Name
-      value: Jam1Hand3
+      value: JamHand11
       objectReference: {fileID: 0}
     - target: {fileID: 1151388028547126963, guid: 23ad50b135298644ba1aef9094c77dc4, type: 3}
       propertyPath: m_LocalRotation.w
@@ -3898,7 +3898,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 23ad50b135298644ba1aef9094c77dc4, type: 3}
       propertyPath: m_Name
-      value: Jam1Hand3 (3)
+      value: JamHand9
       objectReference: {fileID: 0}
     - target: {fileID: 1151388028547126963, guid: 23ad50b135298644ba1aef9094c77dc4, type: 3}
       propertyPath: m_LocalRotation.w
@@ -8184,7 +8184,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: ed1020970ccaa4f4585bd93fbe235b73, type: 3}
       propertyPath: m_Name
-      value: Jam1Hand1 (5)
+      value: JamHand6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -10044,7 +10044,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: ed1020970ccaa4f4585bd93fbe235b73, type: 3}
       propertyPath: m_Name
-      value: Jam1Hand1 (1)
+      value: JamHand4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -13449,7 +13449,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 23ad50b135298644ba1aef9094c77dc4, type: 3}
       propertyPath: m_Name
-      value: Jam1Hand3 (6)
+      value: JamHand13
       objectReference: {fileID: 0}
     - target: {fileID: 1151388028547126963, guid: 23ad50b135298644ba1aef9094c77dc4, type: 3}
       propertyPath: m_LocalRotation.w
@@ -14371,7 +14371,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: ed1020970ccaa4f4585bd93fbe235b73, type: 3}
       propertyPath: m_Name
-      value: Jam1Hand1 (4)
+      value: JamHand5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -17958,7 +17958,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 23ad50b135298644ba1aef9094c77dc4, type: 3}
       propertyPath: m_Name
-      value: Jam1Hand3 (1)
+      value: JamHand12
       objectReference: {fileID: 0}
     - target: {fileID: 1151388028547126963, guid: 23ad50b135298644ba1aef9094c77dc4, type: 3}
       propertyPath: m_LocalRotation.w
@@ -21351,7 +21351,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 23ad50b135298644ba1aef9094c77dc4, type: 3}
       propertyPath: m_Name
-      value: Jam1Hand3 (2)
+      value: JamHand10
       objectReference: {fileID: 0}
     - target: {fileID: 1151388028547126963, guid: 23ad50b135298644ba1aef9094c77dc4, type: 3}
       propertyPath: m_LocalRotation.w
@@ -21998,7 +21998,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 23ad50b135298644ba1aef9094c77dc4, type: 3}
       propertyPath: m_Name
-      value: Jam1Hand3 (8)
+      value: JamHand15
       objectReference: {fileID: 0}
     - target: {fileID: 1151388028547126963, guid: 23ad50b135298644ba1aef9094c77dc4, type: 3}
       propertyPath: m_LocalRotation.w
@@ -24554,7 +24554,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 23ad50b135298644ba1aef9094c77dc4, type: 3}
       propertyPath: m_Name
-      value: Jam1Hand3 (5)
+      value: JamHand7
       objectReference: {fileID: 0}
     - target: {fileID: 1151388028547126963, guid: 23ad50b135298644ba1aef9094c77dc4, type: 3}
       propertyPath: m_LocalRotation.w
@@ -25936,7 +25936,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: ed1020970ccaa4f4585bd93fbe235b73, type: 3}
       propertyPath: m_Name
-      value: Jam1Hand1 (6)
+      value: JamHand3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -26797,7 +26797,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: ed1020970ccaa4f4585bd93fbe235b73, type: 3}
       propertyPath: m_Name
-      value: Jam1Hand1 (2)
+      value: JamHand1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -33830,7 +33830,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 23ad50b135298644ba1aef9094c77dc4, type: 3}
       propertyPath: m_Name
-      value: Jam1Hand3 (7)
+      value: JamHand14
       objectReference: {fileID: 0}
     - target: {fileID: 1151388028547126963, guid: 23ad50b135298644ba1aef9094c77dc4, type: 3}
       propertyPath: m_LocalRotation.w
@@ -34571,7 +34571,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 23ad50b135298644ba1aef9094c77dc4, type: 3}
       propertyPath: m_Name
-      value: Jam1Hand3 (10)
+      value: JamHand17
       objectReference: {fileID: 0}
     - target: {fileID: 1151388028547126963, guid: 23ad50b135298644ba1aef9094c77dc4, type: 3}
       propertyPath: m_LocalRotation.w
@@ -35511,7 +35511,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: ed1020970ccaa4f4585bd93fbe235b73, type: 3}
       propertyPath: m_Name
-      value: Jam1Hand1 (3)
+      value: JamHand2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -36639,7 +36639,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 23ad50b135298644ba1aef9094c77dc4, type: 3}
       propertyPath: m_Name
-      value: Jam1Hand3 (4)
+      value: JamHand8
       objectReference: {fileID: 0}
     - target: {fileID: 1151388028547126963, guid: 23ad50b135298644ba1aef9094c77dc4, type: 3}
       propertyPath: m_LocalRotation.w
