@@ -16,7 +16,7 @@ public class PlayerMove : MonoBehaviour
 
     public bool playerCanMove = true;
     public float walkSpeed = 5f;
-    public float runSpeed = 8f;
+    public float runSpeed = 12f;
     public float maxVelocityChange = 10f;
 
     public bool enableJump = true;
@@ -57,6 +57,11 @@ public class PlayerMove : MonoBehaviour
         GetComponent<CapsuleCollider>().enabled = !isSneaking;
         GetComponent<BoxCollider>().enabled = isSneaking;
 
+        if (isSneaking && animator.GetFloat("Speed") < 1 && (animator.GetCurrentAnimatorStateInfo(0).IsName("idle") || animator.GetCurrentAnimatorStateInfo(0).IsName("crouch walk")))
+        { 
+            animator.CrossFade("crouch", 0.1f);
+        }
+
         // Movement
         Vector3 inputDir = new Vector3(Input.GetAxisRaw("Horizontal"), 0f, Input.GetAxisRaw("Vertical")).normalized;
 
@@ -78,10 +83,8 @@ public class PlayerMove : MonoBehaviour
             bool isRunning = Input.GetKey(KeyCode.LeftShift);
             float speed = isRunning ? runSpeed : walkSpeed;
 
-            // Set animation parameters
-            animator.SetBool("Walk", !isRunning);
-            animator.SetBool("Run", isRunning);
-            animator.SetBool("CrouchWalk", isSneaking);
+            // Set the Speed parameter in the animator
+            animator.SetFloat("Speed", speed); // Use float parameter for smooth transition
 
             // Movement
             Vector3 targetVelocity = moveDir * speed;
@@ -97,15 +100,14 @@ public class PlayerMove : MonoBehaviour
         }
         else
         {
-            // Stop movement and reset walk/run animations
+            // Stop movement and reset animations
             Vector3 velocity = rb.velocity;
             velocity.x = Mathf.Lerp(velocity.x, 0, 0.2f);
             velocity.z = Mathf.Lerp(velocity.z, 0, 0.2f);
             rb.velocity = velocity;
 
-            animator.SetBool("Walk", false);
-            animator.SetBool("Run", false);
-            animator.SetBool("CrouchWalk", false);
+            animator.SetFloat("Speed", 0); // Set Speed to 0 when not moving
+            animator.SetBool("sneak", false);
         }
 
         CheckGround();
@@ -155,7 +157,7 @@ public class PlayerMove : MonoBehaviour
         }
     }
 
-    // BONUS HOOKS (You can call these from interaction scripts later)
+    // Unused
 
     public void StartPushPull()
     {

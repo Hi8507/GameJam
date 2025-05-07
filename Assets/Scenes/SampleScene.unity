@@ -39535,7 +39535,7 @@ BoxCollider:
   m_Enabled: 0
   serializedVersion: 3
   m_Size: {x: 1, y: 1.4894185, z: 1}
-  m_Center: {x: 0, y: 0.14, z: 0}
+  m_Center: {x: 0, y: -0.3, z: 0}
 --- !u!114 &919132149091529430
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -39551,7 +39551,7 @@ MonoBehaviour:
   Cube: {fileID: 919132148909006661}
   Camera: {fileID: 963194227}
   playerCanMove: 1
-  walkSpeed: 10
+  walkSpeed: 5
   runSpeed: 12
   maxVelocityChange: 15
   enableJump: 1
