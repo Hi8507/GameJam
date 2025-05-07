@@ -9,6 +9,11 @@ ModelImporter:
       assembly: UnityEngine.CoreModule
       name: metal
     second: {fileID: -8896051167825165466, guid: e232cecbf638ce64cae40d1bf3653559, type: 3}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: panomantar
+    second: {fileID: 2100000, guid: 318f1b34e84c21348846d54b970ceee7, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
