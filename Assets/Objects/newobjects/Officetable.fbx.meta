@@ -3,7 +3,22 @@ guid: dd36027b736329d4e9348cd2ff681d3f
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: metal
+    second: {fileID: -8896051167825165466, guid: ecacc82b67709ba498a12df579f6c8ef, type: 3}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: siyah
+    second: {fileID: 1587218590227693610, guid: 8f5a4ee602d1a6d46b5e183bba075281, type: 3}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: tahta2
+    second: {fileID: -8568912186251606084, guid: a9ee5f440de941543b9558befc18eb77, type: 3}
   materials:
     materialImportMode: 2
     materialName: 0
