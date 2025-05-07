@@ -3,7 +3,17 @@ guid: 34eeaed7757655c4d8d411e41db9b76e
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: papertexture
+    second: {fileID: 2100000, guid: e02e607a5ec71eb4a9906baba91382a4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: rough white
+    second: {fileID: -6250606855815188992, guid: 9e4e1066a1d78ca498012e821e508984, type: 3}
   materials:
     materialImportMode: 2
     materialName: 0
