@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.SceneManagement;
 
 [RequireComponent(typeof(NavMeshAgent))]
 public class AIBehavior : MonoBehaviour
@@ -154,5 +155,10 @@ public class AIBehavior : MonoBehaviour
             Vector3 direction = Quaternion.Euler(0, i, 0) * forward;
             Gizmos.DrawLine(position, position + direction * range);
         }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }
