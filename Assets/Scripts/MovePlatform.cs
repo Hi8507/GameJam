@@ -75,4 +75,9 @@ public class MovingPlatform : MonoBehaviour
             yield return Wait;
         }
     }
+
+    private void FixedUpdate()
+    {
+        
+    }
 }
