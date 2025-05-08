@@ -14,12 +14,12 @@ public class TriggerPills : MonoBehaviour
     public bool yellow=false;
     public bool pink = false;
     public bool purple = false;
-    bool asd1=false;
+    bool eaten=false;
     // Start is called before the first frame update
     void Start()
     {
         Takepills.SetActive(false);
-        asd1 = false;
+        eaten = false;
     }
 
     // Update is called once per frame
@@ -41,12 +41,12 @@ public class TriggerPills : MonoBehaviour
     {
         if (other.CompareTag("Character"))
         {
-            if (asd1 == false) { 
+            if (eaten == false) { 
                 if (Input.GetKeyDown(KeyCode.E))
                 {
                     SanityPoints += SanityAdd;
                     Takepills.SetActive(false);
-                    asd1 = true;
+                    eaten = true;
                     this.gameObject.SetActive(false);
                 }
         }
