@@ -12,6 +12,11 @@ public class PlayerMove : MonoBehaviour
     private Camera Camera = null;
     private NavMeshAgent Agent;
 
+    [SerializeField] private float cameraRotationAngle = 0f; // Set in Inspector, e.g., 0 for behind, 180 for front
+    public float cameraSnapDuration = 0.5f;
+    public float cameraDistance = 3f; // How close you want the camera to be after the snap
+    public float cameraHeightOffset = 1.5f;
+
     private RaycastHit[] Hits = new RaycastHit[1];
 
     public bool playerCanMove = true;
@@ -24,6 +29,7 @@ public class PlayerMove : MonoBehaviour
     public float jumpPower = 5f;
     private bool isGrounded = false;
     public bool Jumped = false;
+    private bool isPaused = false;
 
     private Rigidbody rb;
     private Animator animator;
@@ -37,13 +43,24 @@ public class PlayerMove : MonoBehaviour
 
     private void Update()
     {
+        if (isPaused)
+        {
+            rb.velocity = Vector3.zero;
+            return;
+        }
+
         if (enableJump && Input.GetKeyDown(jumpKey) && isGrounded)
         {
             Jump();
         }
 
-        animator.SetBool("jump", !isGrounded); // Update jump status
+        //animator.SetBool("jump", !isGrounded); // Update jump status
         CheckGround();
+
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            SnapCameraHorizontal();
+        }
     }
 
     private void FixedUpdate()
@@ -185,4 +202,48 @@ public class PlayerMove : MonoBehaviour
     {
         animator.SetBool("Hanging", isHanging);
     }
+
+    public void SnapCameraHorizontal()
+    {
+        // Calculate direction from the angle
+        Vector3 targetDirection = Quaternion.Euler(0, cameraRotationAngle, 0) * Vector3.forward;
+
+        // Move the camera to a point closer to the character
+        Vector3 targetPosition = Cube.transform.position - targetDirection.normalized * cameraDistance;
+        targetPosition.y = Cube.transform.position.y + cameraHeightOffset;
+
+        // Calculate the direction the camera should look
+        Vector3 lookTarget = Cube.transform.position + Vector3.up * cameraHeightOffset;
+
+        // Tween both move and look at the same time
+        Sequence cameraSequence = DOTween.Sequence();
+        cameraSequence.Join(Camera.transform.DOMove(targetPosition, cameraSnapDuration));
+        cameraSequence.Join(Camera.transform.DORotateQuaternion(Quaternion.LookRotation(lookTarget - targetPosition), cameraSnapDuration));
+    }
+
+    public void SetPaused(bool pauseState)
+    {
+        isPaused = pauseState;
+
+        if (pauseState)
+        {
+            // Stop NavMeshAgent movement
+            Agent.isStopped = true;
+            Agent.velocity = Vector3.zero;
+
+            // Stop Rigidbody movement
+            rb.velocity = Vector3.zero;
+            rb.isKinematic = true; // Prevents unwanted physics movement
+        }
+        else
+        {
+            // Resume NavMeshAgent movement
+            Agent.isStopped = false;
+
+            // Allow Rigidbody movement again
+            rb.isKinematic = false;
+        }
+
+    }
+
 }
