@@ -11,8 +11,9 @@ public class MainMenuController : MonoBehaviour
     public Slider volume;
     public TMP_Dropdown resolutionDropdown;
     public Toggle FullscreenToggle;
-    public Toggle vsyncToggle;  // V-Sync Toggle
-    public Slider frameRateSlider;  // Frame rate slider
+    public Toggle vsyncToggle;
+    public Slider frameRateSlider;
+    public TMP_Text frameRateLabel;
     public GameObject OptionsScreen;
     public AudioMixer audioMixer;
 
@@ -35,6 +36,7 @@ public class MainMenuController : MonoBehaviour
         // Set initial frame rate value from PlayerPrefs or default to 60
         frameRateSlider.value = PlayerPrefs.GetFloat("FrameRateCap", 60f);
         frameRateSlider.onValueChanged.AddListener(OnFrameRateChanged);
+        UpdateFrameRateLabel();
 
         // Populate resolution dropdown
         resolutions = Screen.resolutions;
@@ -78,10 +80,16 @@ public class MainMenuController : MonoBehaviour
     private void OnFrameRateChanged(float value)
     {
         Application.targetFrameRate = Mathf.RoundToInt(value);
+        UpdateFrameRateLabel();
         PlayerPrefs.SetFloat("FrameRateCap", value);
         PlayerPrefs.Save();
     }
 
+    // Update the label to show frame rate cap
+    private void UpdateFrameRateLabel()
+    {
+        frameRateLabel.text = "Max Frame Rate: " + Mathf.RoundToInt(frameRateSlider.value) + " FPS";
+    }
 
     public void StartButton()
     {
@@ -99,8 +107,6 @@ public class MainMenuController : MonoBehaviour
         // Use current fullscreen setting
         Screen.SetResolution(res.width, res.height, Screen.fullScreen);
     }
-
-    // Update the label that comes with the Toggle
 
     public void OptionsButton()
     {
@@ -124,4 +130,3 @@ public class MainMenuController : MonoBehaviour
         Debug.Log("Exited Game");
     }
 }
-
