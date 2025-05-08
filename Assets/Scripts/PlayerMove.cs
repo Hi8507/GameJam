@@ -1,20 +1,17 @@
 ﻿using DG.Tweening;
 using UnityEngine;
-using UnityEngine.AI;
 using System.Collections;
 
-[RequireComponent(typeof(NavMeshAgent))]
 public class PlayerMove : MonoBehaviour
 {
     public GameObject Cube;
 
     [SerializeField]
     private Camera Camera = null;
-    private NavMeshAgent Agent;
 
-    [SerializeField] private float cameraRotationAngle = 0f; // Set in Inspector, e.g., 0 for behind, 180 for front
+    [SerializeField] private float cameraRotationAngle = 0f;
     public float cameraSnapDuration = 0.5f;
-    public float cameraDistance = 3f; // How close you want the camera to be after the snap
+    public float cameraDistance = 3f;
     public float cameraHeightOffset = 1.5f;
 
     private RaycastHit[] Hits = new RaycastHit[1];
@@ -37,7 +34,6 @@ public class PlayerMove : MonoBehaviour
     private void Awake()
     {
         rb = GetComponent<Rigidbody>();
-        Agent = GetComponent<NavMeshAgent>();
         animator = GetComponent<Animator>();
     }
 
@@ -54,7 +50,6 @@ public class PlayerMove : MonoBehaviour
             Jump();
         }
 
-        //animator.SetBool("jump", !isGrounded); // Update jump status
         CheckGround();
 
         if (Input.GetKeyDown(KeyCode.R))
@@ -67,24 +62,23 @@ public class PlayerMove : MonoBehaviour
     {
         if (!playerCanMove) return;
 
-        // Sneaking
         bool isSneaking = Input.GetKey(KeyCode.LeftControl);
         animator.SetBool("sneak", isSneaking);
 
         GetComponent<CapsuleCollider>().enabled = !isSneaking;
         GetComponent<BoxCollider>().enabled = isSneaking;
 
-        if (isSneaking && animator.GetFloat("Speed") < 1 && (animator.GetCurrentAnimatorStateInfo(0).IsName("idle") || animator.GetCurrentAnimatorStateInfo(0).IsName("crouch walk")))
-        { 
+        if (isSneaking && animator.GetFloat("Speed") < 1 &&
+            (animator.GetCurrentAnimatorStateInfo(0).IsName("idle") ||
+             animator.GetCurrentAnimatorStateInfo(0).IsName("crouch walk")))
+        {
             animator.CrossFade("crouch", 0.1f);
         }
 
-        // Movement
         Vector3 inputDir = new Vector3(Input.GetAxisRaw("Horizontal"), 0f, Input.GetAxisRaw("Vertical")).normalized;
 
         if (inputDir.magnitude > 0)
         {
-            // Movement direction relative to camera
             Vector3 camForward = Camera.transform.forward;
             camForward.y = 0f;
             camForward.Normalize();
@@ -96,14 +90,11 @@ public class PlayerMove : MonoBehaviour
             Vector3 moveDir = camForward * inputDir.z + camRight * inputDir.x;
             moveDir.Normalize();
 
-            // Walk or run
             bool isRunning = Input.GetKey(KeyCode.LeftShift);
             float speed = isRunning ? runSpeed : walkSpeed;
 
-            // Set the Speed parameter in the animator
-            animator.SetFloat("Speed", speed); // Use float parameter for smooth transition
+            animator.SetFloat("Speed", speed);
 
-            // Movement
             Vector3 targetVelocity = moveDir * speed;
             Vector3 velocity = rb.velocity;
             Vector3 velocityChange = targetVelocity - velocity;
@@ -117,13 +108,12 @@ public class PlayerMove : MonoBehaviour
         }
         else
         {
-            // Stop movement and reset animations
             Vector3 velocity = rb.velocity;
             velocity.x = Mathf.Lerp(velocity.x, 0, 0.2f);
             velocity.z = Mathf.Lerp(velocity.z, 0, 0.2f);
             rb.velocity = velocity;
 
-            animator.SetFloat("Speed", 0); // Set Speed to 0 when not moving
+            animator.SetFloat("Speed", 0);
             animator.SetBool("sneak", false);
         }
 
@@ -174,8 +164,6 @@ public class PlayerMove : MonoBehaviour
         }
     }
 
-    // Unused
-
     public void StartPushPull()
     {
         animator.SetTrigger("PushPullStart");
@@ -205,17 +193,11 @@ public class PlayerMove : MonoBehaviour
 
     public void SnapCameraHorizontal()
     {
-        // Calculate direction from the angle
         Vector3 targetDirection = Quaternion.Euler(0, cameraRotationAngle, 0) * Vector3.forward;
-
-        // Move the camera to a point closer to the character
         Vector3 targetPosition = Cube.transform.position - targetDirection.normalized * cameraDistance;
         targetPosition.y = Cube.transform.position.y + cameraHeightOffset;
-
-        // Calculate the direction the camera should look
         Vector3 lookTarget = Cube.transform.position + Vector3.up * cameraHeightOffset;
 
-        // Tween both move and look at the same time
         Sequence cameraSequence = DOTween.Sequence();
         cameraSequence.Join(Camera.transform.DOMove(targetPosition, cameraSnapDuration));
         cameraSequence.Join(Camera.transform.DORotateQuaternion(Quaternion.LookRotation(lookTarget - targetPosition), cameraSnapDuration));
@@ -227,23 +209,12 @@ public class PlayerMove : MonoBehaviour
 
         if (pauseState)
         {
-            // Stop NavMeshAgent movement
-            Agent.isStopped = true;
-            Agent.velocity = Vector3.zero;
-
-            // Stop Rigidbody movement
             rb.velocity = Vector3.zero;
-            rb.isKinematic = true; // Prevents unwanted physics movement
+            rb.isKinematic = true;
         }
         else
         {
-            // Resume NavMeshAgent movement
-            Agent.isStopped = false;
-
-            // Allow Rigidbody movement again
             rb.isKinematic = false;
         }
-
     }
-
 }
