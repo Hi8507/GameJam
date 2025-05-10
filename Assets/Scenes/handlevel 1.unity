@@ -12673,9 +12673,7 @@ MonoBehaviour:
   maxSanity: 100
   StartSanity: 100
   sanityDecayRate: 3
-  Yellowpill: {fileID: 8164078559919443036}
-  Pinkpill: {fileID: 8164078559919443036}
-  purplepill: {fileID: 8164078559919443036}
+  pills: []
   hands:
   - {fileID: 0}
   - {fileID: 1675079596}
@@ -20230,6 +20228,7 @@ MonoBehaviour:
   yelloweaten: 0
   pinkeaten: 0
   purpleeaten: 0
+  Gulp: {fileID: 0}
 --- !u!1 &1611224655
 GameObject:
   m_ObjectHideFlags: 0
@@ -23980,7 +23979,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 71ebeb92217dc214595a22f381aa8e4f, type: 3}
+  m_audioClip: {fileID: 8300000, guid: a2c9050f480fc2e488b5f73598482919, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.5
   m_Pitch: 1
