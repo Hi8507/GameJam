@@ -29,7 +29,7 @@ public class NewGamescript : MonoBehaviour
     [Header("Hands")]
     public GameObject[] hands; // assign all in inspector
 
-    void Start()
+    public void Start()
     {
         currentSanity = maxSanity;
         SanityMeter.maxValue = maxSanity;
@@ -38,7 +38,7 @@ public class NewGamescript : MonoBehaviour
         Debug.Log("Sanity initialized: " + currentSanity);
     }
 
-    void Update()
+    public void Update()
     {
         if (!isGameRunning) return;
 
@@ -89,7 +89,7 @@ public class NewGamescript : MonoBehaviour
     float ConsumeHandSanity(GameObject hand)
     {
         var trigger = hand.GetComponent<handtrigger>();
-        if (trigger != null && trigger.SanityPoints > 0)
+        if (trigger != null && trigger.SanityPoints < 0)
         {
             float points = trigger.SanityPoints;
             trigger.SanityPoints = 0;

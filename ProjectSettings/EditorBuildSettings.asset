@@ -12,6 +12,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Level 1.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   - enabled: 1
+    path: Assets/Scenes/Handslevel.unity
+    guid: c0fab9e6d3255e64da32c1a2e6719949
+  - enabled: 1
     path: Assets/Scenes/Level2.unity
     guid: 1ba5b84aea283f345af0222720f09dfa
   - enabled: 1

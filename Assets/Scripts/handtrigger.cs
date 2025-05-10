@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class handtrigger : MonoBehaviour
 {
-    public int Sanitylose = 15;
-    public int SanityPoints = 0;
+    public float Sanitylose = 15;
+    public float SanityPoints = 0;
     // Start is called before the first frame update
-    void Start()
+    public void Start()
     {
         SanityPoints = 0;
     }
@@ -18,10 +18,11 @@ public class handtrigger : MonoBehaviour
 
     }
 
-    private void OnTriggerEnter(Collider other)
+    public void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Character"))
         {
+            
             SanityPoints = -Sanitylose;
         }
     }
