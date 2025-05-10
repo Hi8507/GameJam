@@ -25,7 +25,7 @@ public class NewGamescript : MonoBehaviour
     private bool isGameRunning = true;
 
     [Header("Pills")]
-    public GameObject Yellowpill, Pinkpill, purplepill;
+    public GameObject[] pills;
 
     [Header("Hands")]
     public GameObject[] hands; // assign all in inspector
@@ -50,9 +50,15 @@ public class NewGamescript : MonoBehaviour
         currentSanity -= sanityDecayRate * Time.deltaTime;
 
         // Add pill sanity points once
-        currentSanity += ConsumePillSanity(Yellowpill);
-        currentSanity += ConsumePillSanity(Pinkpill);
-        currentSanity += ConsumePillSanity(purplepill);
+        foreach (var pill in pills)
+        {
+            currentSanity += ConsumeHandSanity(pill);
+        }
+        //currentSanity += ConsumePillSanity(Yellowpill);
+        //currentSanity += ConsumePillSanity(Pinkpill);
+        //currentSanity += ConsumePillSanity(purplepill);
+        //currentSanity += ConsumePillSanity(newpill);
+
 
         // Add hand sanity points once
         foreach (var hand in hands)

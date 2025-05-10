@@ -6,6 +6,8 @@ public class handtrigger : MonoBehaviour
 {
     public float Sanitylose = 15;
     public float SanityPoints = 0;
+
+
     // Start is called before the first frame update
     public void Start()
     {
