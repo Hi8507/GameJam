@@ -17,6 +17,7 @@ public class NewGamescript : MonoBehaviour
 
     [Header("Gameplay Settings")]
     public float maxSanity = 100f;
+    public float StartSanity = 100f;
     public float sanityDecayRate = 5f; // points per second
 
     private float currentSanity;
@@ -31,7 +32,7 @@ public class NewGamescript : MonoBehaviour
 
     public void Start()
     {
-        currentSanity = maxSanity;
+        currentSanity = StartSanity;
         SanityMeter.maxValue = maxSanity;
         SanityMeter.value = currentSanity;
 

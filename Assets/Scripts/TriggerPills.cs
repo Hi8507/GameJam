@@ -11,9 +11,9 @@ public class TriggerPills : MonoBehaviour
 
     public int SanityAdd = 20;
     public int SanityPoints=0;
-    public bool yellow=false;
-    public bool pink = false;
-    public bool purple = false;
+    public bool yelloweaten=false;
+    public bool pinkeaten = false;
+    public bool purpleeaten = false;
     bool eaten=false;
     // Start is called before the first frame update
     void Start()
