@@ -8,13 +8,16 @@ public class InteractObjectsscript : MonoBehaviour
     public bool tape= false;
     public bool bed=false;
     public bool bookshelf = false;
+    public bool WarnedDoctors = false;
     public bool computer = false;   //these are for interacting with the object and then character does or says somehting about it
 
     public AudioSource TapeAU;
     public AudioSource BedAU;
     public AudioSource bookAU;
     public AudioSource computerAU;
-    public AudioSource takenAU;
+  //  public AudioSource takenAU;
+    public AudioSource BewareDocAU;
+
 
     public GameObject Interact;
 
@@ -38,10 +41,23 @@ public class InteractObjectsscript : MonoBehaviour
             if(tape== true)
             {
               TapeAU.Play();
-                if (taken == false)
-                {
-
-                }
+            }
+            if (bed == true)
+            {
+                BedAU.Play();
+            }
+            if (bookshelf == true)
+            {
+                bookAU.Play();
+            }
+            if (computer == true)
+            {
+                computerAU.Play();
+            }
+            if (WarnedDoctors == true)
+            {
+                BewareDocAU.Play();
+                WarnedDoctors= false;
             }
 
 
@@ -53,7 +69,7 @@ public class InteractObjectsscript : MonoBehaviour
         {
             if (tape == true)
             {
-                TapeAU.Play();
+               
                 if (taken == false)
                 {
                     if (Input.GetKeyDown(KeyCode.E))
@@ -62,6 +78,7 @@ public class InteractObjectsscript : MonoBehaviour
                     }
                 }
             }
+
 
 
         }
