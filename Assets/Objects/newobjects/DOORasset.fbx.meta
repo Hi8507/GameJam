@@ -3,7 +3,32 @@ guid: 80005eda837ed6c4286a9a5829424a53
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: EEVEE GLASS SHADERglass
+    second: {fileID: 2100000, guid: 9cb43230ccd561c429fa2b5c9de22c88, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: "kap\u0131 reengi"
+    second: {fileID: 2100000, guid: 5ac8e683a6d7afb448f186ea4f3cd814, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: metal
+    second: {fileID: 2100000, guid: 6cf6f8004d552aa4ba1b7d0a56b9911b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: siyah
+    second: {fileID: 2100000, guid: 254c472b5c727e34286d844696c2c6a1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: white
+    second: {fileID: 2100000, guid: 06d784691f3e44c40b9d2be618e05f46, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
