@@ -25,7 +25,7 @@ public class handtrigger : MonoBehaviour
         if (other.CompareTag("Character"))
         {
             
-            SanityPoints = -Sanitylose;
+            SanityPoints -= Sanitylose;
         }
     }
 }

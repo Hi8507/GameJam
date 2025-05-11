@@ -52,7 +52,7 @@ public class NewGamescript : MonoBehaviour
         // Add pill sanity points once
         foreach (var pill in pills)
         {
-            currentSanity += ConsumeHandSanity(pill);
+            currentSanity += ConsumePillSanity(pill);
         }
         //currentSanity += ConsumePillSanity(Yellowpill);
         //currentSanity += ConsumePillSanity(Pinkpill);

@@ -14,7 +14,7 @@ public class TriggerPills : MonoBehaviour
     public bool yelloweaten=false;
     public bool pinkeaten = false;
     public bool purpleeaten = false;
-    bool eaten=false;
+   public bool eaten=false;
     public AudioSource Gulp;
     // Start is called before the first frame update
     void Start()

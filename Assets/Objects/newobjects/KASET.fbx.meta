@@ -3,7 +3,17 @@ guid: ca4580d0432f80d46a1bff3050162275
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: kasettexture
+    second: {fileID: 2100000, guid: f8a7c423bcfd5ac42877d906024bee98, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: siyah
+    second: {fileID: 2100000, guid: 0af808af9fb219a4f8b46a101d0fc389, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
