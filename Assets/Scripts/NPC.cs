@@ -8,9 +8,11 @@ public class NPC : MonoBehaviour
     public NPCDialouge dialougeData;
     public GameObject dialougePanel;
     public TMP_Text dialougeText, nameText;
+    public AudioSource TextSound;
 
     int DialougeIndex;
     bool isTyping, isDialougeActive;
+    
 
     private bool hasTriggered = false;
 
@@ -67,6 +69,7 @@ public class NPC : MonoBehaviour
         foreach (char letter in dialougeData.DialougeLines[DialougeIndex])
         {
             dialougeText.text += letter;
+            TextSound.Play();
             yield return new WaitForSeconds(dialougeData.typingSpeed);
         }
 
