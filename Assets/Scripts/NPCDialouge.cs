@@ -11,7 +11,7 @@ public class NPCDialouge : ScriptableObject
     public float autoProgressDelay = 1.5f;
     public float typingSpeed = 0.05f;
     public float voicePitch = 1f;
-    public AudioClip voiceSound;
+    public AudioClip voiceSound;    
 
 
 }
