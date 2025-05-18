@@ -7,6 +7,7 @@ TagManager:
   - Character
   - moving
   - Hand
+  - Fruit
   layers:
   - Default
   - TransparentFX
