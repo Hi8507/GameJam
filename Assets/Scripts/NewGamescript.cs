@@ -36,7 +36,7 @@ public class NewGamescript : MonoBehaviour
         SanityMeter.maxValue = maxSanity;
         SanityMeter.value = currentSanity;
 
-        Debug.Log("Sanity initialized: " + currentSanity);
+        //Debug.Log("Sanity initialized: " + currentSanity);
     }
 
     public void Update()
@@ -71,7 +71,7 @@ public class NewGamescript : MonoBehaviour
         SanityMeter.value = currentSanity;
 
         // Debug log
-        Debug.Log("Sanity: " + currentSanity);
+        //Debug.Log("Sanity: " + currentSanity);
 
         if (currentSanity <= 0f)
         {

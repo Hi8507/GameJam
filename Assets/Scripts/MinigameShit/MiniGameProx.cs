@@ -5,19 +5,19 @@ public class MiniGameProx : MonoBehaviour
     [SerializeField] private KeyCode interactionKey = KeyCode.E;
     private bool playerIsNear = false;
 
-    private void Start()
+    private void Awake()
     {
-        // Ensure there's a SceneTransitionManager in the scene
+        // Ensure we have a SceneTransitionManager
         if (SceneTransitionManager.Instance == null)
         {
-            GameObject manager = new GameObject("SceneTransitionManager");
-            manager.AddComponent<SceneTransitionManager>();
+            GameObject managerObject = new GameObject("SceneTransitionManager");
+            managerObject.AddComponent<SceneTransitionManager>();
         }
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Character"))
+        if (other.CompareTag(SceneTransitionManager.Instance.playerTag))
         {
             playerIsNear = true;
         }
@@ -25,7 +25,7 @@ public class MiniGameProx : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.CompareTag("Character"))
+        if (other.CompareTag(SceneTransitionManager.Instance.playerTag))
         {
             playerIsNear = false;
         }

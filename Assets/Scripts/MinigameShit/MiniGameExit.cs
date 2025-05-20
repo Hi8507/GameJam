@@ -6,10 +6,12 @@ public class MiniGameExit : MonoBehaviour
 
     private void Start()
     {
-        // Check if SceneTransitionManager exists
+        // Verify SceneTransitionManager exists
         if (SceneTransitionManager.Instance == null)
         {
-            Debug.LogError("SceneTransitionManager not found! Mini-game exit may not work properly.");
+            Debug.LogError("SceneTransitionManager not found in mini-game scene! Creating one...");
+            GameObject managerObject = new GameObject("SceneTransitionManager");
+            managerObject.AddComponent<SceneTransitionManager>();
         }
     }
 
@@ -17,14 +19,7 @@ public class MiniGameExit : MonoBehaviour
     {
         if (Input.GetKeyDown(exitMiniGameKey))
         {
-            if (SceneTransitionManager.Instance != null)
-            {
-                SceneTransitionManager.Instance.ExitMiniGame();
-            }
-            else
-            {
-                Debug.LogError("Cannot exit mini-game: SceneTransitionManager not found!");
-            }
+            SceneTransitionManager.Instance.ExitMiniGame();
         }
     }
 }
