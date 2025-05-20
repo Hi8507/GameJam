@@ -321,6 +321,7 @@ GameObject:
   - component: {fileID: 1169943004}
   - component: {fileID: 1169943003}
   - component: {fileID: 1169943005}
+  - component: {fileID: 1169943006}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -374,6 +375,20 @@ MonoBehaviour:
   borderTilePrefab: {fileID: 353841621}
   gridWidth: 20
   gridHeight: 20
+--- !u!114 &1169943006
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1169943002}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6584e11630f7f8949988622bd1823436, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  exitMiniGameKey: 27
+  mainSceneBuildIndex: 1
 --- !u!1 &1603130860 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4501617842979382499, guid: bc41b42897165e6429da6e22f8c4dbdb, type: 3}
