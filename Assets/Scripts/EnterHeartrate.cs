@@ -26,4 +26,9 @@ public class EnterHeartrate : MonoBehaviour
         }
 
     }
+
+    public void OnTriggerExit(Collider other)
+    {
+        Heartrate.Stop();
+    }
 }

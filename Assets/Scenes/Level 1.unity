@@ -54051,6 +54051,7 @@ GameObject:
   - component: {fileID: 1156633671}
   - component: {fileID: 1156633670}
   - component: {fileID: 1156633675}
+  - component: {fileID: 919132148030368022}
   m_Layer: 0
   m_Name: Walking
   m_TagString: Untagged
@@ -54058,6 +54059,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &919132148030368022
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 919132148030368021}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a96f81d426c36244b3776d3a8559e6c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Heartrate: {fileID: 2104052257}
 --- !u!1 &919132148475294853
 GameObject:
   m_ObjectHideFlags: 0
@@ -54343,13 +54357,27 @@ GameObject:
   - component: {fileID: 117411985}
   - component: {fileID: 117411990}
   - component: {fileID: 117411991}
+  - component: {fileID: 919132149136928223}
   m_Layer: 0
-  m_Name: Enemy (1)
+  m_Name: Doctor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &919132149136928223
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 919132149136928222}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a96f81d426c36244b3776d3a8559e6c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Heartrate: {fileID: 2104052257}
 --- !u!4 &1031632034234436921
 Transform:
   m_ObjectHideFlags: 0
