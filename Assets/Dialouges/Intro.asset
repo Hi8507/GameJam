@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95d137fac50d1d848bf03fa42b086bb2, type: 3}
+  m_Name: Intro
+  m_EditorClassIdentifier: 
+  npcName: 
+  DialougeLines:
+  - ...
+  - 'Dr. Watson: Linda, prepare the girl''s medicine.'
+  - 'Dr. Watson: Today is the 12th of April, 1992.'
+  - 'Nurse Linda: Alright Lily, it''s time to take your medicine today.'
+  - ...
+  - 'Dr. Watson: No noticeable change in symptoms.'
+  - 'Dr. Watson: I will be increasing the dosage next week. Hopefully it''ll be enough.'
+  - 'Dr. Watson: I have some business to take care of, keep her busy Linda.'
+  - 'Nurse Linda: Yes, sir.'
+  - ...
+  - 'Nurse Linda: Sorry Lily, something just came up. Be good and stay here, okay?'
+  - 'Lily: Linda..?'
+  - ...
+  - 'Lily: I am bored. I''ll look for something to do.'
+  autoProgressLines: 0101010101010101010101010101
+  autoProgressDelay: 3
+  typingSpeed: 0.05
+  voicePitch: 1
+  voiceSound: {fileID: 0}
