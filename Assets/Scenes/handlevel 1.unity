@@ -15193,6 +15193,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1030195763}
   - component: {fileID: 1030195762}
+  - component: {fileID: 1030195764}
   m_Layer: 0
   m_Name: GameManager HandLvL1
   m_TagString: Untagged
@@ -15207,7 +15208,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1030195761}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cd6ef23372a4c91438bfa5d2df7e0bf9, type: 3}
   m_Name: 
@@ -15260,6 +15261,49 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1030195764
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1030195761}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c9635b57d4d97948a3f6e358c921d78, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SanityMeter: {fileID: 2060785595}
+  timerText: {fileID: 546753034}
+  maxSanity: 100
+  StartSanity: 100
+  sanityDecayRate: 3
+  currentSanity: 0
+  pills: []
+  hands:
+  - {fileID: 1675079596}
+  - {fileID: 1646613631}
+  - {fileID: 1886499119}
+  - {fileID: 1880736336}
+  - {fileID: 1686892009}
+  - {fileID: 98014068}
+  - {fileID: 1162091936}
+  - {fileID: 658869674}
+  - {fileID: 1684244255}
+  - {fileID: 839825215}
+  - {fileID: 1107754567}
+  - {fileID: 1661004678}
+  - {fileID: 510627042}
+  - {fileID: 1791017836}
+  - {fileID: 1463885912}
+  - {fileID: 1730679521}
+  - {fileID: 287142947}
+  - {fileID: 207971522}
+  - {fileID: 1270832550}
+  - {fileID: 616719032}
+  - {fileID: 1988553598}
+  - {fileID: 11603024}
+  - {fileID: 304062901}
 --- !u!1001 &1033804659
 PrefabInstance:
   m_ObjectHideFlags: 0
