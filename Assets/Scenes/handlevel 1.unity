@@ -5158,7 +5158,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: ed1020970ccaa4f4585bd93fbe235b73, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.64869994
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ed1020970ccaa4f4585bd93fbe235b73, type: 3}
       propertyPath: m_LocalScale.y
@@ -5702,8 +5702,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cfa3bd84398912b4f88df6063cc65dee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  endMovePosition: {x: -185, y: -21, z: 170}
-  time: 5
+  endMovePosition: {x: -185, y: -21, z: 174}
+  time: 4
 --- !u!65 &510627046
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6633,7 +6633,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: ed1020970ccaa4f4585bd93fbe235b73, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.64869994
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ed1020970ccaa4f4585bd93fbe235b73, type: 3}
       propertyPath: m_LocalScale.y
@@ -10525,7 +10525,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: ed1020970ccaa4f4585bd93fbe235b73, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.64869994
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ed1020970ccaa4f4585bd93fbe235b73, type: 3}
       propertyPath: m_LocalScale.y
@@ -14362,7 +14362,7 @@ MonoBehaviour:
   - {x: -121, y: 0, z: 225}
   - {x: -121, y: 0, z: 177}
   DockDuration: 0.25
-  MoveSpeed: 0.03
+  MoveSpeed: 0.04
   Surface: {fileID: 1105630707}
 --- !u!1 &1107754567 stripped
 GameObject:
@@ -14405,8 +14405,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cfa3bd84398912b4f88df6063cc65dee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  endMovePosition: {x: -155, y: -21, z: 172}
-  time: 5
+  endMovePosition: {x: -155, y: -21, z: 174}
+  time: 4
 --- !u!65 &1107754571
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17662,7 +17662,7 @@ MonoBehaviour:
   - {x: -137, y: 0, z: 177}
   - {x: -137, y: 0, z: 225}
   DockDuration: 0.25
-  MoveSpeed: 0.03
+  MoveSpeed: 0.04
   Surface: {fileID: 1376545353}
 --- !u!1 &1381108337
 GameObject:
@@ -18722,8 +18722,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cfa3bd84398912b4f88df6063cc65dee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  endMovePosition: {x: -168, y: -21, z: 182}
-  time: 5
+  endMovePosition: {x: -168, y: -21, z: 180}
+  time: 4
 --- !u!65 &1463885916
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19006,7 +19006,7 @@ MonoBehaviour:
   - {x: -104, y: 0, z: 177}
   - {x: -104, y: 0, z: 225}
   DockDuration: 0.25
-  MoveSpeed: 0.03
+  MoveSpeed: 0.04
   Surface: {fileID: 1468540730}
 --- !u!1 &1472980051
 GameObject:
@@ -19423,7 +19423,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: ed1020970ccaa4f4585bd93fbe235b73, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.64869994
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ed1020970ccaa4f4585bd93fbe235b73, type: 3}
       propertyPath: m_LocalScale.y
@@ -20035,7 +20035,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: ed1020970ccaa4f4585bd93fbe235b73, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.64869994
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ed1020970ccaa4f4585bd93fbe235b73, type: 3}
       propertyPath: m_LocalScale.y
@@ -21412,8 +21412,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cfa3bd84398912b4f88df6063cc65dee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  endMovePosition: {x: -170, y: -21, z: 172}
-  time: 4
+  endMovePosition: {x: -170, y: -21, z: 174}
+  time: 3
 --- !u!65 &1661004682
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -23177,8 +23177,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cfa3bd84398912b4f88df6063cc65dee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  endMovePosition: {x: -185, y: -21, z: 184}
-  time: 4
+  endMovePosition: {x: -185, y: -21, z: 182}
+  time: 3
 --- !u!65 &1730679525
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -24051,8 +24051,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cfa3bd84398912b4f88df6063cc65dee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  endMovePosition: {x: -153, y: -21, z: 184}
-  time: 4
+  endMovePosition: {x: -153, y: -21, z: 182}
+  time: 3
 --- !u!65 &1791017840
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -27360,7 +27360,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: ed1020970ccaa4f4585bd93fbe235b73, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.64869994
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ed1020970ccaa4f4585bd93fbe235b73, type: 3}
       propertyPath: m_LocalScale.y
