@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.SceneManagement;
@@ -5,6 +6,8 @@ using UnityEngine.SceneManagement;
 [RequireComponent(typeof(NavMeshAgent))]
 public class AIBehavior : MonoBehaviour
 {
+    public GameObject DeathPanel;
+    public AudioSource Scream;
     public Transform[] patrolPoints;
     public float detectionRange = 10f;
     public float loseSightTime = 3f;
@@ -157,7 +160,16 @@ public class AIBehavior : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter(Collider other)
+    public void OnTriggerEnter(Collider other)
+    {
+        DeathPanel.SetActive(true);
+        Scream.Play();
+        Invoke("DeathJump", 4);
+  
+
+
+    }
+    public void DeathJump()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
