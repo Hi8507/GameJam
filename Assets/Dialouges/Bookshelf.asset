@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   npcName: 
   DialougeLines:
-  - There are books!
-  - But I can't read
+  - There are a bunch of books of all colors...
+  - But I can't read.
   autoProgressLines: 0101
   autoProgressDelay: 1.5
   typingSpeed: 0.05

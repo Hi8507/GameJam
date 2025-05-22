@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   npcName: 
   DialougeLines:
-  - This must be a tape
-  - It has someone's voice in it
-  - But how does it work?
+  - A tape..?
+  - Why would the doctor need to record himself?
+  - If only I could play it...
   autoProgressLines: 010101
   autoProgressDelay: 1.5
   typingSpeed: 0.05

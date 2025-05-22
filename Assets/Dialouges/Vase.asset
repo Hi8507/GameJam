@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   npcName: 
   DialougeLines:
-  - Hmm, that vase looks great
-  - I wonder who are the flowers for
+  - Hmm, this vase looks fancy.
+  - I wonder who the flowers are for?
   autoProgressLines: 0101
   autoProgressDelay: 1.5
   typingSpeed: 0.05

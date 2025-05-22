@@ -14,8 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   npcName: 
   DialougeLines:
-  - Those Photoes!
-  - My head!
+  - Those photos...
+  - Why do they look familiar?
+  - My head hurts..!
   autoProgressLines: 0101
   autoProgressDelay: 1.5
   typingSpeed: 0.05
