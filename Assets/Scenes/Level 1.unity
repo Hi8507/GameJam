@@ -7801,7 +7801,7 @@ GameObject:
   - component: {fileID: 285566878}
   - component: {fileID: 285566880}
   m_Layer: 8
-  m_Name: Post-process Volume
+  m_Name: N1 Post-process Volume
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7873,6 +7873,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Heartrate: {fileID: 2104052257}
+  SanityOpen: 0
 --- !u!1 &289621169
 GameObject:
   m_ObjectHideFlags: 0
@@ -27057,8 +27058,10 @@ MonoBehaviour:
   timerText: {fileID: 546753034}
   maxSanity: 100
   StartSanity: 100
-  sanityDecayRate: 1
+  sanityDecayRate: 5
   currentSanity: 0
+  Nurse1: {fileID: 285566876}
+  Nurse2: {fileID: 1887042164}
   pills:
   - {fileID: 5551542487718873174}
   - {fileID: 8164078559919443036}
@@ -52276,7 +52279,7 @@ GameObject:
   - component: {fileID: 1887042167}
   - component: {fileID: 1887042166}
   m_Layer: 8
-  m_Name: Post-process Volume
+  m_Name: N2 Post-process Volume
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -52310,6 +52313,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Heartrate: {fileID: 2104052257}
+  SanityOpen: 0
 --- !u!114 &1887042167
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -53475,6 +53479,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Heartrate: {fileID: 2104052257}
+  SanityOpen: 0
 --- !u!1 &1903983973
 GameObject:
   m_ObjectHideFlags: 0
@@ -53629,6 +53634,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Heartrate: {fileID: 2104052257}
+  SanityOpen: 0
 --- !u!114 &1905039925
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -55710,6 +55716,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Heartrate: {fileID: 2104052257}
+  SanityOpen: 0
 --- !u!1001 &2009710981
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -60293,7 +60300,7 @@ Transform:
   m_GameObject: {fileID: 919132149091529427}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -255.3, y: 1.26, z: 156.9}
+  m_LocalPosition: {x: -83.96, y: 1.26, z: 1.81}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -60510,6 +60517,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Heartrate: {fileID: 2104052257}
+  SanityOpen: 0
 --- !u!1 &919132148475294853
 GameObject:
   m_ObjectHideFlags: 0
@@ -60816,6 +60824,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Heartrate: {fileID: 2104052257}
+  SanityOpen: 0
 --- !u!4 &1031632034234436921
 Transform:
   m_ObjectHideFlags: 0

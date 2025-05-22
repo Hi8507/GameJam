@@ -8,6 +8,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using UnityEngine.UIElements;
+using static UnityEngine.UIElements.UxmlAttributeDescription;
 
 public class NewGamescript : MonoBehaviour
 {
@@ -23,6 +24,9 @@ public class NewGamescript : MonoBehaviour
     public float currentSanity;
     private float elapsedTime = 0f;
     private bool isGameRunning = true;
+    public GameObject Nurse1;
+    public GameObject Nurse2;
+
 
     [Header("Pills")]
     public GameObject[] pills;
@@ -44,10 +48,15 @@ public class NewGamescript : MonoBehaviour
         if (!isGameRunning) return;
 
         elapsedTime += Time.deltaTime;
-       // timerText.text = $"Time: {Mathf.FloorToInt(elapsedTime)}s";
+        // timerText.text = $"Time: {Mathf.FloorToInt(elapsedTime)}s";
 
         // Sanity decays over time
-                                              // currentSanity -= sanityDecayRate * Time.deltaTime;
+       if( Nurse1.GetComponent<EnterHeartrate>().SanityOpen== true || Nurse2.GetComponent<EnterHeartrate>().SanityOpen == true)
+        {
+            currentSanity -= sanityDecayRate * Time.deltaTime;
+
+        }
+
 
         // Add pill sanity points once
         foreach (var pill in pills)
@@ -107,6 +116,8 @@ public class NewGamescript : MonoBehaviour
 
     private void ReloadScene()
     {
+
+
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }
