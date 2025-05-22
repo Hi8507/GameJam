@@ -47,7 +47,7 @@ public class NewGamescript : MonoBehaviour
        // timerText.text = $"Time: {Mathf.FloorToInt(elapsedTime)}s";
 
         // Sanity decays over time
-       // currentSanity -= sanityDecayRate * Time.deltaTime;
+                                              // currentSanity -= sanityDecayRate * Time.deltaTime;
 
         // Add pill sanity points once
         foreach (var pill in pills)
