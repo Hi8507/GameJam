@@ -722,7 +722,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6418bc8fd516a545b5d4b5c69434de0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Sanitylose: 3
+  Sanitylose: 10
   SanityPoints: 0
 --- !u!65 &11603029
 BoxCollider:
@@ -2198,7 +2198,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6418bc8fd516a545b5d4b5c69434de0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Sanitylose: 3
+  Sanitylose: 10
   SanityPoints: 0
 --- !u!54 &98014074
 Rigidbody:
@@ -4347,7 +4347,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6418bc8fd516a545b5d4b5c69434de0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Sanitylose: 20
+  Sanitylose: 10
   SanityPoints: 0
 --- !u!65 &207971527
 BoxCollider:
@@ -6194,7 +6194,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6418bc8fd516a545b5d4b5c69434de0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Sanitylose: 20
+  Sanitylose: 10
   SanityPoints: 0
 --- !u!65 &287142952
 BoxCollider:
@@ -6623,7 +6623,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6418bc8fd516a545b5d4b5c69434de0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Sanitylose: 3
+  Sanitylose: 10
   SanityPoints: 0
 --- !u!65 &304062906
 BoxCollider:
@@ -8375,7 +8375,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6418bc8fd516a545b5d4b5c69434de0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Sanitylose: 3
+  Sanitylose: 10
   SanityPoints: 0
 --- !u!54 &510627048
 Rigidbody:
@@ -10046,7 +10046,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6418bc8fd516a545b5d4b5c69434de0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Sanitylose: 3
+  Sanitylose: 10
   SanityPoints: 0
 --- !u!65 &616719037
 BoxCollider:
@@ -11024,7 +11024,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6418bc8fd516a545b5d4b5c69434de0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Sanitylose: 3
+  Sanitylose: 10
   SanityPoints: 0
 --- !u!54 &658869680
 Rigidbody:
@@ -13985,7 +13985,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6418bc8fd516a545b5d4b5c69434de0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Sanitylose: 3
+  Sanitylose: 10
   SanityPoints: 0
 --- !u!54 &839825221
 Rigidbody:
@@ -16719,7 +16719,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1030195761}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cd6ef23372a4c91438bfa5d2df7e0bf9, type: 3}
   m_Name: 
@@ -16730,7 +16730,7 @@ MonoBehaviour:
   StartSanity: 100
   sanityDecayRate: 3
   currentSanity: 0
-  Nurse1: {fileID: 2003281358}
+  Nurse1: {fileID: 1667701435}
   Nurse2: {fileID: 1167249114}
   pills:
   - {fileID: 1979002626}
@@ -16780,7 +16780,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1030195761}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8c9635b57d4d97948a3f6e358c921d78, type: 3}
   m_Name: 
@@ -18830,7 +18830,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6418bc8fd516a545b5d4b5c69434de0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Sanitylose: 3
+  Sanitylose: 10
   SanityPoints: 0
 --- !u!54 &1107754573
 Rigidbody:
@@ -19471,7 +19471,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6418bc8fd516a545b5d4b5c69434de0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Sanitylose: 3
+  Sanitylose: 10
   SanityPoints: 0
 --- !u!54 &1162091942
 Rigidbody:
@@ -19685,7 +19685,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a96f81d426c36244b3776d3a8559e6c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Heartrate: {fileID: 0}
+  Heartrate: {fileID: 1183047295}
   SanityOpen: 0
 --- !u!114 &1167249116
 MonoBehaviour:
@@ -21318,7 +21318,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6418bc8fd516a545b5d4b5c69434de0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Sanitylose: 3
+  Sanitylose: 10
   SanityPoints: 0
 --- !u!65 &1270832555
 BoxCollider:
@@ -24790,7 +24790,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6418bc8fd516a545b5d4b5c69434de0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Sanitylose: 3
+  Sanitylose: 10
   SanityPoints: 0
 --- !u!54 &1463885918
 Rigidbody:
@@ -27893,7 +27893,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6418bc8fd516a545b5d4b5c69434de0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Sanitylose: 3
+  Sanitylose: 10
   SanityPoints: 0
 --- !u!54 &1646613637
 Rigidbody:
@@ -28198,7 +28198,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6418bc8fd516a545b5d4b5c69434de0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Sanitylose: 3
+  Sanitylose: 10
   SanityPoints: 0
 --- !u!54 &1661004684
 Rigidbody:
@@ -28582,8 +28582,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 25, y: 4, z: 20}
-  m_Center: {x: 0.35757065, y: 1.4563937, z: -0.385489}
+  m_Size: {x: 25, y: 4.0000005, z: 25.673468}
+  m_Center: {x: 0.35757095, y: 1.4563942, z: 2.4512455}
 --- !u!114 &1667701440
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28708,7 +28708,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6418bc8fd516a545b5d4b5c69434de0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Sanitylose: 3
+  Sanitylose: 10
   SanityPoints: 0
 --- !u!54 &1675079602
 Rigidbody:
@@ -28889,7 +28889,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6418bc8fd516a545b5d4b5c69434de0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Sanitylose: 3
+  Sanitylose: 10
   SanityPoints: 0
 --- !u!54 &1684244261
 Rigidbody:
@@ -29038,7 +29038,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6418bc8fd516a545b5d4b5c69434de0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Sanitylose: 3
+  Sanitylose: 10
   SanityPoints: 0
 --- !u!54 &1686892015
 Rigidbody:
@@ -30259,7 +30259,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6418bc8fd516a545b5d4b5c69434de0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Sanitylose: 3
+  Sanitylose: 10
   SanityPoints: 0
 --- !u!54 &1730679527
 Rigidbody:
@@ -31632,7 +31632,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6418bc8fd516a545b5d4b5c69434de0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Sanitylose: 3
+  Sanitylose: 10
   SanityPoints: 0
 --- !u!54 &1791017842
 Rigidbody:
@@ -33890,7 +33890,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6418bc8fd516a545b5d4b5c69434de0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Sanitylose: 3
+  Sanitylose: 10
   SanityPoints: 0
 --- !u!54 &1880736342
 Rigidbody:
@@ -34071,7 +34071,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6418bc8fd516a545b5d4b5c69434de0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Sanitylose: 3
+  Sanitylose: 10
   SanityPoints: 0
 --- !u!54 &1886499125
 Rigidbody:
@@ -34958,6 +34958,77 @@ MonoBehaviour:
   m_IgnoreFromBuild: 0
   m_ApplyToChildren: 1
   m_AffectedAgents: ffffffff
+--- !u!1 &1973627473
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1973627476}
+  - component: {fileID: 1973627475}
+  - component: {fileID: 1973627474}
+  m_Layer: 0
+  m_Name: Gamestart Dialouge
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!65 &1973627474
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1973627473}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2, y: 2, z: 2}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1973627475
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1973627473}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9ca3b7e82c28114485292919269ab69, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialougeData: {fileID: 11400000, guid: 4b2be9552744108478a66c2704a6c0f3, type: 2}
+  dialougePanel: {fileID: 2059602341}
+  dialougeText: {fileID: 1077255699}
+  nameText: {fileID: 1788298770}
+  TextSound: {fileID: 168516813}
+--- !u!4 &1973627476
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1973627473}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -214, y: 1.26, z: 200}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1976290361
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -35546,7 +35617,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6418bc8fd516a545b5d4b5c69434de0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Sanitylose: 3
+  Sanitylose: 10
   SanityPoints: 0
 --- !u!65 &1988553603
 BoxCollider:
@@ -37900,7 +37971,7 @@ Transform:
   m_GameObject: {fileID: 919132148164500309}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: -271.62, y: 1.81, z: 199.98}
+  m_LocalPosition: {x: -285.1, y: 1.81, z: 199.98}
   m_LocalScale: {x: 2.7085295, y: 0.24398156, z: 2.7085295}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -39128,7 +39199,7 @@ MonoBehaviour:
   Scream: {fileID: 1786595860}
   patrolPoints:
   - {fileID: 1024394076}
-  moveSpeed: 4
+  moveSpeed: 5
 --- !u!65 &3469287838481370701
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -39148,8 +39219,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 2.1071196, y: 97.254005, z: 2.107119}
-  m_Center: {x: -0.00000005960466, y: 48.63094, z: 0}
+  m_Size: {x: 2.1071193, y: 73.85649, z: 2.1071193}
+  m_Center: {x: -0.0000000880251, y: 36.93218, z: 0}
 --- !u!1 &3614653200581819787
 GameObject:
   m_ObjectHideFlags: 0
@@ -40661,6 +40732,7 @@ SceneRoots:
   m_Roots:
   - {fileID: 705507995}
   - {fileID: 618159998}
+  - {fileID: 1973627476}
   - {fileID: 543450653629720681}
   - {fileID: 1642580487}
   - {fileID: 1030195763}

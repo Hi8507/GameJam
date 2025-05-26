@@ -15,8 +15,9 @@ MonoBehaviour:
   npcName: 
   DialougeLines:
   - "No! I don\u2019t want a shot! I hate needles!"
-  autoProgressLines: 01
+  - It hurts!
+  autoProgressLines: 0101
   autoProgressDelay: 0.5
-  typingSpeed: 0.08
+  typingSpeed: 0.05
   voicePitch: 1
   voiceSound: {fileID: 8300000, guid: 05a131d81a0ee5449baf0e5c0c00f94f, type: 3}

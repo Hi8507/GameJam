@@ -54,6 +54,7 @@ public class NewGamescript : MonoBehaviour
        if( Nurse1.GetComponent<EnterHeartrate>().SanityOpen== true || Nurse2.GetComponent<EnterHeartrate>().SanityOpen == true)
         {
             currentSanity -= sanityDecayRate * Time.deltaTime;
+            Debug.Log("Sanity: " + currentSanity);
 
         }
 
