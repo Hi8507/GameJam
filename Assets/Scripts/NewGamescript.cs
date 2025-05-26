@@ -20,12 +20,14 @@ public class NewGamescript : MonoBehaviour
     public float maxSanity = 100f;
     public float StartSanity = 100f;
     public float sanityDecayRate = 5f; // points per second
+    public float intensifiedDecayMultiplier = 2f;
 
     public float currentSanity;
     private float elapsedTime = 0f;
     private bool isGameRunning = true;
     public GameObject Nurse1;
     public GameObject Nurse2;
+
 
 
     [Header("Pills")]
@@ -40,7 +42,7 @@ public class NewGamescript : MonoBehaviour
         SanityMeter.maxValue = maxSanity;
         SanityMeter.value = currentSanity;
 
-        //Debug.Log("Sanity initialized: " + currentSanity);
+        Debug.Log("Sanity initialized: " + currentSanity);
     }
 
     public void Update()
@@ -48,16 +50,30 @@ public class NewGamescript : MonoBehaviour
         if (!isGameRunning) return;
 
         elapsedTime += Time.deltaTime;
-        // timerText.text = $"Time: {Mathf.FloorToInt(elapsedTime)}s";
+        //timerText.text = $"Time: {Mathf.FloorToInt(elapsedTime)}s";
 
         // Sanity decays over time
-       if( Nurse1.GetComponent<EnterHeartrate>().SanityOpen== true || Nurse2.GetComponent<EnterHeartrate>().SanityOpen == true)
-        {
-            currentSanity -= sanityDecayRate * Time.deltaTime;
-            Debug.Log("Sanity: " + currentSanity);
+        float appliedDecayRate = sanityDecayRate; // Start with normal rate
 
+        bool nurse1Active = Nurse1.GetComponent<EnterHeartrate>().SanityOpen;
+
+        bool nurse2Active = Nurse2.GetComponent<EnterHeartrate>().SanityOpen;
+
+        if (nurse1Active || nurse2Active)
+        {
+            appliedDecayRate *= intensifiedDecayMultiplier;
+            Debug.Log("Secondary depletion active");
+        }
+        else
+        {
+            Debug.Log("Normal decay rate applied");
         }
 
+        currentSanity -= appliedDecayRate * Time.deltaTime;
+
+        Debug.Log("Nurse1: " + Nurse1.GetComponent<EnterHeartrate>().SanityOpen);
+
+        Debug.Log("Nurse2: " + Nurse2.GetComponent<EnterHeartrate>().SanityOpen);
 
         // Add pill sanity points once
         foreach (var pill in pills)
@@ -81,7 +97,7 @@ public class NewGamescript : MonoBehaviour
         SanityMeter.value = currentSanity;
 
         // Debug log
-        //Debug.Log("Sanity: " + currentSanity);
+       // Debug.Log("Sanity: " + currentSanity);
 
         if (currentSanity <= 0f)
         {
@@ -90,6 +106,8 @@ public class NewGamescript : MonoBehaviour
             ReloadScene();
         }
     }
+
+
 
     float ConsumePillSanity(GameObject pill)
     {

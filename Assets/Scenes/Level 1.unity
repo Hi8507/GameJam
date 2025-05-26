@@ -2837,6 +2837,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Sanitylose: 15
   SanityPoints: 0
+  Bite: {fileID: 0}
 --- !u!1001 &98094256
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4805,14 +4806,14 @@ RectTransform:
   m_GameObject: {fileID: 184129998}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 19.748102, y: 1.1831931, z: 1}
+  m_LocalScale: {x: 48.91929, y: 12.586517, z: 1.9115976}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2060785594}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 48, y: -1130}
   m_SizeDelta: {x: -1820, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &184130000
@@ -4828,18 +4829,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.9245283, g: 0.8852795, b: 0.8852795, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: ed92c5eda07ec2e4abd1bdac9740f8ce, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c24f0c241343d7d458762e48c1d0eeb3, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
-  m_FillMethod: 4
+  m_FillMethod: 0
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
@@ -13093,6 +13094,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Sanitylose: 15
   SanityPoints: 0
+  Bite: {fileID: 0}
 --- !u!1 &460248313
 GameObject:
   m_ObjectHideFlags: 0
@@ -14250,6 +14252,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Sanitylose: 15
   SanityPoints: 0
+  Bite: {fileID: 0}
 --- !u!1 &513712040
 GameObject:
   m_ObjectHideFlags: 0
@@ -14937,7 +14940,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -673, y: 441}
+  m_AnchoredPosition: {x: -715.1, y: 441}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &548500930
@@ -17103,6 +17106,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Sanitylose: 15
   SanityPoints: 0
+  Bite: {fileID: 0}
 --- !u!1001 &661893950
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21752,6 +21756,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Sanitylose: 15
   SanityPoints: 0
+  Bite: {fileID: 0}
 --- !u!1 &844115242
 GameObject:
   m_ObjectHideFlags: 0
@@ -22031,14 +22036,14 @@ RectTransform:
   m_GameObject: {fileID: 858475038}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.8768651, y: 0.93792, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2060785594}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: -0.0009765625}
+  m_AnchoredPosition: {x: 107, y: -0.0009765625}
   m_SizeDelta: {x: 0.00036621, y: 0.00036621}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &858475040
@@ -27129,10 +27134,11 @@ MonoBehaviour:
   timerText: {fileID: 546753034}
   maxSanity: 100
   StartSanity: 100
-  sanityDecayRate: 5
+  sanityDecayRate: 2
+  intensifiedDecayMultiplier: 2
   currentSanity: 0
-  Nurse1: {fileID: 285566876}
-  Nurse2: {fileID: 1887042164}
+  Nurse1: {fileID: 919132148030368021}
+  Nurse2: {fileID: 1905039923}
   pills:
   - {fileID: 5551542487718873174}
   - {fileID: 8164078559919443036}
@@ -29946,6 +29952,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Sanitylose: 15
   SanityPoints: 0
+  Bite: {fileID: 0}
 --- !u!1001 &1113327218
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -31941,6 +31948,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Sanitylose: 15
   SanityPoints: 0
+  Bite: {fileID: 0}
 --- !u!1 &1163190006
 GameObject:
   m_ObjectHideFlags: 0
@@ -39513,6 +39521,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Sanitylose: 15
   SanityPoints: 0
+  Bite: {fileID: 0}
 --- !u!1001 &1466595488
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -44287,6 +44296,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Sanitylose: 15
   SanityPoints: 0
+  Bite: {fileID: 0}
 --- !u!1 &1651508030
 GameObject:
   m_ObjectHideFlags: 0
@@ -44666,6 +44676,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Sanitylose: 15
   SanityPoints: 0
+  Bite: {fileID: 0}
 --- !u!1 &1663168445
 GameObject:
   m_ObjectHideFlags: 0
@@ -45080,6 +45091,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Sanitylose: 15
   SanityPoints: 0
+  Bite: {fileID: 0}
 --- !u!1001 &1683013168
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -45224,6 +45236,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Sanitylose: 15
   SanityPoints: 0
+  Bite: {fileID: 0}
 --- !u!1 &1685690922
 GameObject:
   m_ObjectHideFlags: 0
@@ -45408,6 +45421,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Sanitylose: 15
   SanityPoints: 0
+  Bite: {fileID: 0}
 --- !u!1 &1691121109
 GameObject:
   m_ObjectHideFlags: 0
@@ -47074,6 +47088,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Sanitylose: 15
   SanityPoints: 0
+  Bite: {fileID: 0}
 --- !u!1 &1733080841 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: a646b5eb676b0be4885503272a770ca0, type: 3}
@@ -48230,6 +48245,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Sanitylose: 15
   SanityPoints: 0
+  Bite: {fileID: 0}
 --- !u!1 &1793720393
 GameObject:
   m_ObjectHideFlags: 0
@@ -52129,6 +52145,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Sanitylose: 15
   SanityPoints: 0
+  Bite: {fileID: 0}
 --- !u!1001 &1882572854
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -52305,6 +52322,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Sanitylose: 15
   SanityPoints: 0
+  Bite: {fileID: 0}
 --- !u!1 &1886967543
 GameObject:
   m_ObjectHideFlags: 0
@@ -57073,7 +57091,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2060785593}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
