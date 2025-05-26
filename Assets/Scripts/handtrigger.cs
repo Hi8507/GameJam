@@ -6,6 +6,7 @@ public class handtrigger : MonoBehaviour
 {
     public float Sanitylose = 15;
     public float SanityPoints = 0;
+    public AudioSource Bite;
 
 
     // Start is called before the first frame update
@@ -26,6 +27,16 @@ public class handtrigger : MonoBehaviour
         {
             
             SanityPoints -= Sanitylose;
+            Bite.Play();
+        }
+    }
+    public void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("Character"))
+        {
+
+
+            Bite.Stop();
         }
     }
 }
